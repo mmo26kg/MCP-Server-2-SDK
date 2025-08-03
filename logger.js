@@ -8,3 +8,11 @@ export function logServiceCall(type, name, args) {
         args ? chalk.magenta(JSON.stringify(args)) : ""
     );
 }
+export function logResult(result, error) {
+    console.log(
+        chalk.cyan(`----[RESULT]`),
+        chalk.magenta(result),
+        chalk.red(error ? `Error: ${error}` : "")
+    );
+}
+
